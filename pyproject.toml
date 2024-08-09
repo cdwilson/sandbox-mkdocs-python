@@ -42,7 +42,7 @@ Issues = "https://github.com/cdwilson/sandbox-mkdocs-python/issues"
 Source = "https://github.com/cdwilson/sandbox-mkdocs-python"
 
 [tool.hatch.version]
-path = "src/sandbox_mkdocs_python/__about__.py"
+path = "src/sandbox_mkdocs_python/__init__.py"
 
 [tool.hatch.envs.default]
 features = [
@@ -65,9 +65,6 @@ check = "mypy --install-types --non-interactive {args:src/sandbox_mkdocs_python 
 source_pkgs = ["sandbox_mkdocs_python", "tests"]
 branch = true
 parallel = true
-omit = [
-  "src/sandbox_mkdocs_python/__about__.py",
-]
 
 [tool.coverage.paths]
 sandbox_mkdocs_python = ["src/sandbox_mkdocs_python", "*/sandbox-mkdocs-python/src/sandbox_mkdocs_python"]
