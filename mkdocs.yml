@@ -9,10 +9,7 @@ theme:
     - navigation.sections
 plugins:
   - search # https://squidfunk.github.io/mkdocs-material/plugins/search/
-  - gen-files: # https://github.com/oprypin/mkdocs-gen-files
-      scripts:
-        - scripts/gen_ref_pages.py
-  - literate-nav: # https://github.com/oprypin/mkdocs-literate-nav
+  - literate-nav # https://github.com/oprypin/mkdocs-literate-nav
   - mkdocstrings: # https://mkdocstrings.github.io/
       default_handler: python
       enable_inventory: true
@@ -41,4 +38,3 @@ nav:
   - Code Reference: reference/
 watch:
   - src/
-  - scripts/gen_ref_pages.py
