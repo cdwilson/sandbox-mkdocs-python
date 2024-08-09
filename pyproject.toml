@@ -54,6 +54,10 @@ features = [
   "doc",
 ]
 
+[tool.hatch.envs.doc.scripts]
+build = "mkdocs build --strict"
+serve = "mkdocs serve --strict"
+
 [tool.hatch.envs.types]
 extra-dependencies = [
   "mypy>=1.0.0",

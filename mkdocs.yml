@@ -1,0 +1,44 @@
+site_name: My Docs
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.footer
+    - navigation.expand
+    - navigation.indexes
+    - navigation.sections
+plugins:
+  - search # https://squidfunk.github.io/mkdocs-material/plugins/search/
+  - gen-files: # https://github.com/oprypin/mkdocs-gen-files
+      scripts:
+        - scripts/gen_ref_pages.py
+  - literate-nav: # https://github.com/oprypin/mkdocs-literate-nav
+  - mkdocstrings: # https://mkdocstrings.github.io/
+      default_handler: python
+      enable_inventory: true
+      handlers:
+        python:
+          paths:
+            - src
+          options:
+            docstring_options:
+              ignore_init_summary: true
+            heading_level: 1
+            inherited_members: true
+            merge_init_into_class: true
+            group_by_category: true
+            separate_signature: true
+            show_category_heading: true
+            show_root_heading: true
+            show_root_full_path: false
+            show_signature_annotations: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            signature_crossrefs: true
+nav:
+  - Get Started:
+      - index.md
+  - Code Reference: reference/
+watch:
+  - src/
+  - scripts/gen_ref_pages.py
