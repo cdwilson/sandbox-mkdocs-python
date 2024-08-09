@@ -29,11 +29,11 @@ dependencies = []
 
 [project.optional-dependencies]
 doc = [
-  "mkdocs-gen-files",
   "mkdocs-literate-nav",
   "mkdocs-material",
   "mkdocstrings",
   "mkdocstrings-python",
+  "mdx_truly_sane_lists",
 ]
 
 [project.urls]
