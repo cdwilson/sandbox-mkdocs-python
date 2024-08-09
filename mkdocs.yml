@@ -5,11 +5,12 @@ theme:
     - navigation.tabs
     - navigation.footer
     - navigation.expand
-    - navigation.indexes
+    # - navigation.indexes
     - navigation.sections
 plugins:
   - search # https://squidfunk.github.io/mkdocs-material/plugins/search/
   - literate-nav # https://github.com/oprypin/mkdocs-literate-nav
+  - section-index # https://github.com/oprypin/mkdocs-section-index
   - mkdocstrings: # https://mkdocstrings.github.io/
       default_handler: python
       enable_inventory: true
@@ -32,6 +33,8 @@ plugins:
             show_symbol_type_heading: true
             show_symbol_type_toc: true
             signature_crossrefs: true
+markdown_extensions:
+  - mdx_truly_sane_lists
 nav:
   - Get Started:
       - index.md

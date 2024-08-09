@@ -33,6 +33,8 @@ doc = [
   "mkdocs-material",
   "mkdocstrings",
   "mkdocstrings-python",
+  "mkdocs-section-index",
+  "mdx_truly_sane_lists",
 ]
 
 [project.urls]
