@@ -29,8 +29,8 @@ dependencies = []
 
 [project.optional-dependencies]
 doc = [
+  "mkdocs-awesome-pages-plugin",
   "mkdocs-gen-files",
-  "mkdocs-literate-nav",
   "mkdocs-material",
   "mkdocstrings",
   "mkdocstrings-python",

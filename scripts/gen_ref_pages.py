@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0 OR MIT
 
-# https://mkdocstrings.github.io/recipes/#automatic-code-reference-pages
+# Adapted from https://mkdocstrings.github.io/recipes/#automatic-code-reference-pages
 
 """Generate the code reference pages and navigation."""
 
@@ -26,6 +26,8 @@ for path in sorted(src.rglob("*.py")):
         parts = parts[:-1]
         doc_path = doc_path.with_name("index.md")
         full_doc_path = full_doc_path.with_name("index.md")
+        with mkdocs_gen_files.open(full_doc_path.with_name(".pages"), "w") as fd:
+            fd.write(f"title: {parts[-1]}")
     elif parts[-1] == "__main__":
         continue
 
@@ -33,9 +35,6 @@ for path in sorted(src.rglob("*.py")):
 
     with mkdocs_gen_files.open(full_doc_path, "w") as fd:
         ident = ".".join(parts)
-        fd.write(f"::: {ident}")
+        fd.write(f"---\ntitle: {parts[-1]}\n---\n\n::: {ident}")
 
     mkdocs_gen_files.set_edit_path(full_doc_path, path.relative_to(root))
-
-with mkdocs_gen_files.open("reference/SUMMARY.md", "w") as nav_file:
-    nav_file.writelines(nav.build_literate_nav())
