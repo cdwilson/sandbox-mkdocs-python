@@ -29,8 +29,7 @@ dependencies = []
 
 [project.optional-dependencies]
 doc = [
-  "mkdocs-gen-files",
-  "mkdocs-literate-nav",
+  "mkdocs-autoapi",
   "mkdocs-material",
   "mkdocstrings",
   "mkdocstrings-python",

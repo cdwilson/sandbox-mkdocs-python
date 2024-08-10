@@ -5,14 +5,11 @@ theme:
     - navigation.tabs
     - navigation.footer
     - navigation.expand
-    - navigation.indexes
     - navigation.sections
 plugins:
   - search # https://squidfunk.github.io/mkdocs-material/plugins/search/
-  - gen-files: # https://github.com/oprypin/mkdocs-gen-files
-      scripts:
-        - scripts/gen_ref_pages.py
-  - literate-nav: # https://github.com/oprypin/mkdocs-literate-nav
+  - mkdocs-autoapi: # https://github.com/jcayers20/mkdocs-autoapi
+      project_root: src/
   - mkdocstrings: # https://mkdocstrings.github.io/
       default_handler: python
       enable_inventory: true
@@ -38,7 +35,7 @@ plugins:
 nav:
   - Get Started:
       - index.md
-  - Code Reference: reference/
+  - API Documentation: autoapi/
 watch:
   - src/
   - scripts/gen_ref_pages.py
