@@ -24,7 +24,10 @@ plugins:
             docstring_options:
               ignore_init_summary: true
             heading_level: 1
+            preload_modules:
+              - pydantic
             inherited_members: true
+            members: true
             merge_init_into_class: true
             group_by_category: true
             separate_signature: true
@@ -35,6 +38,8 @@ plugins:
             show_symbol_type_heading: true
             show_symbol_type_toc: true
             signature_crossrefs: true
+          import:
+            - https://docs.pydantic.dev/latest/objects.inv
 watch:
   - src/
   - scripts/gen_ref_pages.py
