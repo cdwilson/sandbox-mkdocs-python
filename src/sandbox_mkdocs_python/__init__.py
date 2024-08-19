@@ -2,6 +2,6 @@
 #
 # SPDX-License-Identifier: Apache-2.0 OR MIT
 
-"""This is the module docstring for the sandbox_mkdocs_python module."""
+"""This is the module docstring for the [`sandbox_mkdocs_python`][] module."""
 
 __version__ = "0.1.0"

@@ -29,6 +29,7 @@ dependencies = []
 
 [project.optional-dependencies]
 doc = [
+  "black",
   "mkdocs-awesome-pages-plugin",
   "mkdocs-gen-files",
   "mkdocs-material",
